@@ -55,3 +55,5 @@ akkor harcol vele vagy puszta kézzel vagy a nálad lévő fegyverrel.
 Fontos megjegyezni, hogy a fegyvered megmarad amíg újat nem választol, de ha egyszer már használtad szörnyön, akkor már csak olyan szörnnyel harcolhatsz a fegyverrel, ami ugyanolyan vagy kisebb értékű.
 
 Ha kiválasztottad a három kártyát, vége a körödnek. Maradjon a negyedik kártya, amellé húzz fel még hármat a következő szobához.
+
+[Szabályok ez alapján](https://stfj.net/art/2011/Scoundrel.pdf)
