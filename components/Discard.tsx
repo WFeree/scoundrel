@@ -1,15 +1,16 @@
-import React from 'react'
-import { Card, CardContent, CardTitle } from './ui/card'
+import { Card, CardContent, CardTitle } from "./ui/card";
+import { Skeleton } from "./ui/skeleton";
 
 const Discard = () => {
   return (
-    <Card className='flex flex-col justify-center items-center'>
+    <Card className="flex flex-col justify-center items-center">
       <CardTitle className="text-center">Discard</CardTitle>
-      <CardContent className="flex gap-4 items-center relative">
-        <div className="w-30 h-48 bg-black/10 rounded border border-gray-900"></div>
+
+      <CardContent className="flex gap-4 items-center">
+        <Skeleton className="w-35 h-48 rounded border" />
       </CardContent>
     </Card>
-  )
-}
+  );
+};
 
-export default Discard
+export default Discard;

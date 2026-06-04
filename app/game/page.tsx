@@ -4,6 +4,7 @@ import Action from "@/components/Action"
 import Discard from "@/components/Discard"
 import Dungeon from "@/components/Dungeon"
 import Equip from "@/components/Equip"
+import Header from "@/components/Header"
 import Health from "@/components/Health"
 import Room from "@/components/Room"
 import { useEffect, useState } from "react"
@@ -19,6 +20,11 @@ const page = () => {
   const [deck, setDeck] = useState<Card[]>([])
   const [deckID, setDeckID] = useState<string>("")
   const [roomCards, setRoomCards] = useState<Card[]>([]);
+  const [log, setLog] = useState<string[]>([]);
+
+  const addLog = (message: string) => {
+  setLog((prev) => [message, ...prev]);
+  };
 
   const excludedCards = [
   "AH", "KH", "QH", "JH",
@@ -43,21 +49,48 @@ const page = () => {
       setDeck(filteredDeck);});
   }, []);
 
+  const handleCardClick = (card: Card, index: number) => {
+  switch (card.value) {
+      case "JACK":
+        card.value = '11'
+        break;
+      case "QUEEN":
+        card.value = "12"
+        break;
+      case "KING":
+        card.value = "13"
+        break;
+      case "ACE":
+        card.value = "14"
+        break;
+      default:
+        card.value;
+    }
+    if(card.suit == "HEARTS"){
+      addLog(`Healed ${card.value}`);
+    }
+    if(card.suit == "SPADES" || card.suit == "CLUBS"){
+      addLog(`Attacked a level ${card.value} monster`);
+    }
+    if(card.suit == "DIAMONDS"){
+      addLog(`Equipped a level ${card.value} weapon`);
+    }
+    
+  };
+
   return (
     <div className="flex pt-9 items-center min-h-screen flex-col">
-      <h1 className="text-4xl font-bold">SCOUNDREL</h1>
-      <h3 className="text-xl">CHOOSE CARDS</h3>
-      <h4 className="text-md pb-10">3 REMAINS</h4>
+      <Header/>
       <div className="grid grid-cols-5 grid-rows-2 w-full min-h-150 gap-4 p-6">
         <Dungeon
           cardsRemaining={deck.length}
           onDrawRoom={drawRoom}
         />
-        <Room cards={roomCards} />
+        <Room cards={roomCards} onCardClick={handleCardClick} />
         <Discard />
         <Health/>
         <Equip />
-        <Action/>
+        <Action log={log}/>
       </div>
     </div>
   )
