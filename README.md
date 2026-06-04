@@ -50,3 +50,8 @@ akkor harcol vele vagy puszta kézzel vagy a nálad lévő fegyverrel.
 ##### Harc
 
 * Ha puszta kézzel harcolsz a szörnnyel, vondd ki a sebzését az életedből majd tedd a dobópakliba.
+* Ha a fegyvereddel harcolsz, helyezd a szörnyet a fegyverre, úgy, hogy látszódjon a fegyver értéke. Vondd ki a fegyver értékét a szörny életerejéből és vondd ki a megmaradt pontokat az életedből.
+
+Fontos megjegyezni, hogy a fegyvered megmarad amíg újat nem választol, de ha egyszer már használtad szörnyön, akkor már csak olyan szörnnyel harcolhatsz a fegyverrel, ami ugyanolyan vagy kisebb értékű.
+
+Ha kiválasztottad a három kártyát, vége a körödnek. Maradjon a negyedik kártya, amellé húzz fel még hármat a következő szobához.
